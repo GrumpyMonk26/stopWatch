@@ -15,6 +15,8 @@ function startTimer() {
     timerEl.textContent = formatTime(elapsedTime);
   }, 10);
   startBtnEl.disabled = true;
+  stopBtnEl.disabled = false;
+  resetBtnEl.disabled = false;
 }
 
 function formatTime(elapsedTime) {
@@ -34,10 +36,19 @@ function formatTime(elapsedTime) {
 }
 
 function stopTimer() {
-  console.log('stopped');
+  clearInterval(timerInterval);
+  startBtnEl.disabled = false;
+  stopBtnEl.disabled = true;
 }
 
-function resetTimer() {}
+function resetTimer() {
+  clearInterval(timerInterval);
+  elapsedTime = 0;
+  timerEl.textContent = '00:00:00';
+  startBtnEl.disabled = false;
+  stopBtnEl.disabled = true;
+  resetBtnEl.disabled = true;
+}
 
 startBtnEl.addEventListener('click', startTimer);
 
