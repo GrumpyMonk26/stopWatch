@@ -14,6 +14,7 @@ function startTimer() {
     elapsedTime = Date.now() - startTime;
     timerEl.textContent = formatTime(elapsedTime);
   }, 10);
+  startBtnEl.disabled = true;
 }
 
 function formatTime(elapsedTime) {
