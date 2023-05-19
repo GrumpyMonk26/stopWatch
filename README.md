@@ -12,4 +12,4 @@
 
 ##### To enhance the visual appeal and interactivity, we will start by implementing CSS styles for the buttons, including design elements and hover effects. Then, using JavaScript, we will retrieve the current time from the browser, manipulate the content accordingly, replace it with the calculated time, and provide seamless functionality for starting, stopping, and resetting the timer.
 
-###### Live Demo -
+###### Live Demo - https://gm-stopwatch.netlify.app/
